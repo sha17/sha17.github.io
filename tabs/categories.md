@@ -45,10 +45,15 @@ type: categories
       {% else %}
         <i class="far fa-folder fa-fw"></i>
       {% endif %}
+        
+        <!-- hyperlink disabled and li being used below
         <a href="{{ site.baseurl }}/categories/{{ category_name | replace: ' ', '-' | downcase | url_encode }}/"
           class="ml-1 mr-2">
           {{ category_name }}
         </a>
+        -->
+        
+        <li class="ml-1 mr-2" style="display:inline; list-style:none;"> {{ category_name }} </li>
 
         <!-- content count -->
         {% assign top_posts_size = site.categories[category_name] | size %}
@@ -83,12 +88,30 @@ type: categories
         {% for sub_category in sub_categories %}
         <li class="list-group-item">
           <i class="far fa-folder fa-fw"></i>
+
+          <!-- hyperlink disabled and li being used blow
           <a href="{{ site.baseurl }}/categories/{{ sub_category | replace: ' ', '-' | downcase | url_encode }}/"
             class="ml-1 mr-2">{{ sub_category }}</a>
+          -->
+          
+          <ul style="display:inline-block; margin-left:-35px; margin-right:10px">
+          {{ sub_category }} </ul>
+          
+
           {% assign posts_size = site.categories[sub_category] | size %}
           <span class="text-muted small font-weight-light">{{ posts_size }}
             post{% if posts_size > 1 %}s{% endif %}
           </span>
+
+          <!-- list titles under (sub)categories -->
+          <ul>
+          {% for post in site.categories[category_name] %}
+              {% if sub_category==post.categories[-1] %}       <!-- need to care edge cases!!!! -->
+                  <li><a href="{{post.url}}">{{post.title}}</a></li>
+              {% endif %}
+          {% endfor %}
+          </ul>
+
         </li>
         {% endfor %}
       </ul>
