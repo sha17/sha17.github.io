@@ -101,6 +101,7 @@ layout: default
           </div>
         {% endif %}
 
+	<!-- post-tail-bottom -->
         <div class="post-tail-bottom
           d-flex justify-content-between align-items-center pt-5 pb-2">
           {% if site.data.rights.license %}
@@ -110,10 +111,10 @@ layout: default
             by the author.
           </div>
           {% endif %}
-
           {% include post-sharing.html %}
+        </div>
 
-        </div><!-- .post-tail-bottom -->
+
 
       </div><!-- div.post-tail -->
 
@@ -132,16 +133,18 @@ layout: default
 
       {% include post-nav.html %}
 
+      {% include related-posts.html %}
+
       {% if site.disqus.comments and page.comments %}
         {% include disqus.html %}
       {% endif %}
-
-      {% include related-posts.html %}
 
     </div> <!-- .pl-1 pr-1 -->
 
   </div> <!-- #post-extend-wrapper -->
 
 </div> <!-- .row -->
+
+
 
 {% include lozad.html %}
