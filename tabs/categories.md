@@ -45,14 +45,14 @@ type: categories
       {% else %}
         <i class="far fa-folder fa-fw"></i>
       {% endif %}
-        
+
         <!-- hyperlink disabled and li being used below
         <a href="{{ site.baseurl }}/categories/{{ category_name | replace: ' ', '-' | downcase | url_encode }}/"
           class="ml-1 mr-2">
           {{ category_name }}
         </a>
         -->
-        
+
         <li class="ml-1 mr-2" style="display:inline; list-style:none;"> {{ category_name }} </li>
 
         <!-- content count -->
@@ -93,12 +93,19 @@ type: categories
           <a href="{{ site.baseurl }}/categories/{{ sub_category | replace: ' ', '-' | downcase | url_encode }}/"
             class="ml-1 mr-2">{{ sub_category }}</a>
           -->
-          
+
           <ul style="display:inline-block; margin-left:-35px; margin-right:10px">
           {{ sub_category }} </ul>
-          
 
-          {% assign posts_size = site.categories[sub_category] | size %}
+          <!-- match both category and subcategory -->
+          {% assign posts_size = 0 %}
+          {% for post in site.categories[category_name] %}
+              {% if post.categories[-1]==sub_category %}
+                  {% assign posts_size = posts_size | plus:1 %}
+              {% endif %}
+          {% endfor %}
+
+
           <span class="text-muted small font-weight-light">{{ posts_size }}
             post{% if posts_size > 1 %}s{% endif %}
           </span>
