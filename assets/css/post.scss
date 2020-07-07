@@ -378,3 +378,7 @@ $prompt-newer: "{{ site.data.label.post.button.next }}";
     margin-right: calc((100% - 1150px) / 8 + 300px);
   }
 }
+
+.MJX-TEX {
+    white-space: inherit;
+}
