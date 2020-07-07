@@ -26,11 +26,11 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-        <script>
+        <script async>
             window.MathJax = {
             tex: {
                 packages: ['base'],          // extensions to use
-                displayMath: [['$$', '$$']], // start/end delimiter pairs for display math
+                displayMath: [['$$', '$$'], ["\[","\]"]], // start/end delimiter pairs for display math
 
                 processEscapes: false,      // use \$ to produce a literal dollar sign
                 processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
