@@ -163,7 +163,7 @@ defaults:
 
 sass:
   sass_dir: /assets/css
-  style: compressed
+  style: expanded
 
 compress_html:
   clippings: pre
