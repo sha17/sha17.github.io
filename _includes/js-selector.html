@@ -23,9 +23,6 @@
     <script src="{{ '/assets/js/post.min.js' | relative_url }}" async></script>
 
     {% if page.math %}
-        <script type="text/javascript"
-            async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_CHTML"></script>
-
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({
                 extensions: ["tex2jax.js"],
@@ -37,13 +34,15 @@
                 },
                 tex2jax: {
                     inlineMath:  [["$", "$"], ["\\(", "\\)"]],
-                    displayMath: [ ["$$","$$"] ],
+                    displayMath: [ ["$$","$$"], ["\\[", "\\]"] ],
                     processEscapes: true,
                     processEnvironments: true,
                 }
             });
         </script>
-
+        <script type="text/javascript" async
+                src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_CHTML">
+        </script>
     {% endif %}
 
 {% elsif page.layout == 'page' %}
