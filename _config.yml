@@ -83,7 +83,7 @@ toc: true
 
 paginate: 10
 
-markdown: maruku
+markdown: kramdown
 
 highlighter: rouge
 
