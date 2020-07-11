@@ -6,6 +6,8 @@ tags: [Meta Learning]
 math: true
 comments: true
 ---
+## Summary
+Base Network들의 평균 Loss를 최소화 하는 Optimizer를 RNN로 만들어 Meta Learning을 통해 Gradient Descent로 학습한다.<br>
 
 ## Components
 1. **Meta Representation<br>**
@@ -18,9 +20,6 @@ comments: true
    $$<br>
    여기서 $\mathcal{f}$는 base network, $\theta$는 base network의 weights, $\phi$는 RNN optimizer의 weights<br>
 
-## Summary
-Base Network들의 평균 Loss를 최소화 하는 Optimizer를 Meta Learning을 통해 Gradient Descent로 학습한다.<br>
-
 ## Algorithm
    task distribution에 최적화된 optimizer를 meta learning을 사용하여 학습하는 것이다.<br>
    이때 optimizer는 RNN을 사용하고 각 base network들은 이 RNN에서 Gradient 값을 얻어<br>
@@ -29,10 +28,7 @@ Base Network들의 평균 Loss를 최소화 하는 Optimizer를 Meta Learning을
    Meta Objective의 parameter인 **$\phi$에 대하여 Gradient Descent**를 통해 Update된다.<br>
    알고리즘의 제목이 Learning to learn gradient descent by gradient descent인 이유를 알 수 있다.
 
-## Implementation
-... 구현중
-
-
 
 ## Reference
-1. Hands-on meta learning with python
+1. Learning to learn by gradient descent by gradient descent<br>
+   Marcin Andrychowicz, Misha Denil, Sergio Gomez, Matthew W. Hoffman, David Pfau, Tom Schaul, Brendan Shillingford, Nando de Freitas
