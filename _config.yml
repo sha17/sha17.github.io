@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name             : "Seongsu Ha"
-  avatar           : "/assets/images/seongsu.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/seongsu.JPG" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Graduate School of Data Science, Seoul National University"
   location         : 
   email            : "sha17@snu.ac.kr"
@@ -105,7 +105,7 @@ author:
       url: "sha17@snu.ac.kr"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https:seongsuha.net"
+      url: "https://www.seongsuha.net"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
