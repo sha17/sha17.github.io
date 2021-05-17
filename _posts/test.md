@@ -4,7 +4,7 @@ excerpt: "good"
 
 categories:
     - ComputerVision
-tags:
-    - 3dCNN
+last_modified_at:
+    - {% last_modified_at %}
 ---
 teststsetset
